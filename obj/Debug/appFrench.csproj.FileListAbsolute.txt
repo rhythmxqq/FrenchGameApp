@@ -1,0 +1,13 @@
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\bin\Debug\appFrench.exe.config
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\bin\Debug\appFrench.exe
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\bin\Debug\appFrench.pdb
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.csproj.AssemblyReference.cache
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.Form1.resources
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.Properties.Resources.resources
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.csproj.GenerateResource.cache
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.csproj.CoreCompileInputs.cache
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.exe
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.pdb
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.FormReg.resources
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.FormMain.resources
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\obj\Debug\appFrench.FormGame.resources
