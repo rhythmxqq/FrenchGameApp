@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,11 @@ namespace appFrench
     {
         private int correctAnswers = 0;
         private int wrongAnswers = 0;
+        public int id = 0;
 
-        public FormGame()
+        public FormGame(int idUs)
         {
+            id = idUs;
             InitializeComponent();
             StartNewGame();
         }
@@ -43,10 +46,11 @@ namespace appFrench
             buttonOption3.Text = wordAndOptions.Options[2].Option;
             buttonOption3.Tag = wordAndOptions.Options[2].IsCorrect;
 
+
             // Сделать кнопки видимыми и активными
             buttonOption1.Visible = buttonOption2.Visible = buttonOption3.Visible = true;
         }
-
+      
         private void FormGame_Load(object sender, EventArgs e)
         {
 
@@ -69,6 +73,7 @@ namespace appFrench
                 button.BackColor = System.Drawing.Color.Red;
                 if (wrongAnswers >= 3)
                 {
+                    saveRecord(correctAnswers);
                     MessageBox.Show($"Игра окончена. Правильных ответов: {correctAnswers}.", "Конец игры", MessageBoxButtons.OK);
                     StartNewGame();
                 }
@@ -78,7 +83,21 @@ namespace appFrench
             buttonOption1.Enabled = buttonOption2.Enabled = buttonOption3.Enabled = false;
             buttonNextLevel.Visible = true;
         }
+        void saveRecord(int correctAnswer)
+        { 
+            Db db = new Db();
+            SqlConnection connection = db.getConnection();
+            using (connection) 
+            { 
+                connection.Open();
+                string quare = "UPDATE UserProgress SET LastReviewed = @record WHERE UserID = @id AND @record > LastReviewed";
+                SqlCommand command = new SqlCommand(quare, connection);
+                command.Parameters.AddWithValue("@record", correctAnswer);
+                command.Parameters.AddWithValue("@id", id);
+                int rowsAffected = command.ExecuteNonQuery();
+            }
 
+        }
         private void buttonNextLevel_Click(object sender, EventArgs e)
         {
             LoadNextWord();

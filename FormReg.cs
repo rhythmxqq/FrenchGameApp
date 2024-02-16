@@ -41,8 +41,8 @@ namespace appFrench
                 string query = "INSERT INTO Users (Username, Password, LanguageLearning, Mail, UserFirstName) VALUES (@Username, @Password, @Mail, @Name, @learn)";
                 SqlCommand cmd = new SqlCommand(query, db.getConnection());
                 cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", learn);
-                cmd.Parameters.AddWithValue("@learn", password);
+                cmd.Parameters.AddWithValue("@Password", password);
+                cmd.Parameters.AddWithValue("@learn", learn);
                 cmd.Parameters.AddWithValue("@Mail", mail);
                 cmd.Parameters.AddWithValue("@Name", name);
                 int rowsAffected = cmd.ExecuteNonQuery();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,22 +14,24 @@ namespace appFrench
     public partial class FormMain : Form
     {
 
-
-        public FormMain()
+        int id = 0;
+        public FormMain(int idUs)
         {
+            id = idUs;
             InitializeComponent();
         }
        
 
         private void buttonLearnSlowed_Click(object sender, EventArgs e)
         {
-            FormGame form = new FormGame();
+            FormGame form = new FormGame(id);
             form.ShowDialog();
         }
 
         private void buttonLearnSpeed_Click(object sender, EventArgs e)
         {
-
+            FormSecondGame form = new FormSecondGame();
+            form.ShowDialog();
         }
 
         private void buttonProfile_Click(object sender, EventArgs e)
@@ -38,7 +41,15 @@ namespace appFrench
 
         private void buttonTopArray_Click(object sender, EventArgs e)
         {
-
+            TopBoardForm form2  = new TopBoardForm();
+            form2.ShowDialog();
         }
+
+        private void buttonListWord_Click(object sender, EventArgs e)
+        {
+            ListWordForm form = new ListWordForm();
+            form.ShowDialog();
+        }
+        
     }
 }

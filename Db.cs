@@ -76,10 +76,23 @@ namespace appFrench
                 }
 
                 // Перемешиваем варианты ответа
-           //     Shuffle(options);
+                Shuffle(options);
             }
 
             return (correctWord, options, correctOption);
+        }
+        private static void Shuffle(List<(string Option, bool IsCorrect)> options)
+        {
+            var rng = new Random();
+            int n = options.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                var value = options[k];
+                options[k] = options[n];
+                options[n] = value;
+            }
         }
         private static List<(string Option, bool IsCorrect)> GetOptionsForWord(int wordId)
         {
@@ -106,25 +119,12 @@ namespace appFrench
                     }
                 }
             }
-            // Закрываем соединение после использования, если необходимо
-            // Если используется пул соединений, закрытие соединения вернет его в пул, а не полностью закроет
+ 
             connection.Close();
 
             return options;
         }
-        private static void Shuffle(List<string> options)
-        {
-            var rng = new Random();
-            int n = options.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = rng.Next(n + 1);
-                var value = options[k];
-                options[k] = options[n];
-                options[n] = value;
-            }
-        }
+       
         public static string GetCorrectAnswer(string word)
         {
             Db db = new Db();

@@ -23,8 +23,19 @@ namespace appFrench
             Boolean auth = AuthenticateUser(logTextBox.Text, passwordTextBox.Text);
             if (auth)
             {
-               FormMain formM = new FormMain();
-                formM.ShowDialog();
+                Db db = new Db();
+                SqlConnection connection = db.getConnection();
+                using (connection)
+                {
+                    connection.Open();
+                    string quare = "SELECT UserID FROM Users WHERE Username = @log";
+                    SqlCommand command = new SqlCommand(quare, connection);
+                    command.Parameters.AddWithValue("@log",logTextBox.Text);
+                    int id = Convert.ToInt32(command.ExecuteScalar());
+                    FormMain formM = new FormMain(id);
+                    formM.ShowDialog();
+                }
+                
             }
             else
             {
