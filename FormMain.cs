@@ -30,13 +30,14 @@ namespace appFrench
 
         private void buttonLearnSpeed_Click(object sender, EventArgs e)
         {
-            FormSecondGame form = new FormSecondGame();
+            FormSecondGame form = new FormSecondGame(id);
             form.ShowDialog();
         }
 
         private void buttonProfile_Click(object sender, EventArgs e)
         {
-
+            ProfileForm formx = new ProfileForm(id);
+            formx.ShowDialog();
         }
 
         private void buttonTopArray_Click(object sender, EventArgs e)

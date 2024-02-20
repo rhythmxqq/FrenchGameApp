@@ -27,3 +27,4 @@ C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGam
 C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\obj\Debug\appFrench.TopBoardForm.resources
 C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\obj\Debug\appFrench.ListWordForm.resources
 C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\obj\Debug\appFrench.FormSecondGame.resources
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\obj\Debug\appFrench.ProfileForm.resources

@@ -90,10 +90,11 @@ namespace appFrench
             using (connection) 
             { 
                 connection.Open();
-                string quare = "UPDATE UserProgress SET LastReviewed = @record WHERE UserID = @id AND @record > LastReviewed";
+                string quare = "UPDATE Games SET Score = @record, PlayedOn = @date WHERE UserID = @id AND @record > Score AND GameType = 1";
                 SqlCommand command = new SqlCommand(quare, connection);
                 command.Parameters.AddWithValue("@record", correctAnswer);
                 command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@date", DateTime.Now);
                 int rowsAffected = command.ExecuteNonQuery();
             }
 

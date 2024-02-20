@@ -14,9 +14,12 @@ namespace appFrench
 {
     public partial class FormSecondGame : Form
     {
+        int id = 0;
         int count = 0;
-        public FormSecondGame()
+        int liveHearts = 3;
+        public FormSecondGame(int id_us)
         {
+            id = id_us;
             InitializeComponent();
             wordCreate();
         }
@@ -53,11 +56,40 @@ namespace appFrench
                 }
                 else
                 {
-                    textBox1.Clear();
-                    wordCreate();
+                    liveHearts--;
+                    if (liveHearts > 0)
+                    {
+                        textBox1.Clear();
+                        wordCreate();
+                    }
+                    else
+                    {
+                        saveRecord(count);
+                        MessageBox.Show($"Игра окончена. Правильных ответов: {count}.", "Конец игры", MessageBoxButtons.OK);
+                        count = 0;
+                        liveHearts = 3; labelCount.Text = count.ToString();
+                        textBox1.Clear();
+                        wordCreate();
+                    }
                 }
                 }
             }
+        void saveRecord(int correctAnswer)
+        {
+            Db db = new Db();
+            SqlConnection connection = db.getConnection();
+            using (connection)
+            {
+                connection.Open();
+                string quare = "UPDATE Games SET Score = @record, PlayedOn = @date WHERE UserID = @id AND @record > Score AND GameType = 2";
+                SqlCommand command = new SqlCommand(quare, connection);
+                command.Parameters.AddWithValue("@record", correctAnswer);
+                command.Parameters.AddWithValue("@id", id);
+                command.Parameters.AddWithValue("@date", DateTime.Now);
+                int rowsAffected = command.ExecuteNonQuery();
+            }
+
+        }
         void wordCreate()
         {
             Db db = new Db();
