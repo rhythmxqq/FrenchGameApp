@@ -51,6 +51,11 @@ namespace appFrench
             ListWordForm form = new ListWordForm();
             form.ShowDialog();
         }
-        
+
+        private void buttonTranslate_Click(object sender, EventArgs e)
+        {
+            FormTranslate formq = new FormTranslate();
+            formq.ShowDialog();
+        }
     }
 }

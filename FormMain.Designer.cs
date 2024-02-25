@@ -33,6 +33,7 @@
             this.buttonLearnSpeed = new System.Windows.Forms.Button();
             this.buttonTopArray = new System.Windows.Forms.Button();
             this.buttonListWord = new System.Windows.Forms.Button();
+            this.buttonTranslate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonProfile
@@ -85,11 +86,22 @@
             this.buttonListWord.UseVisualStyleBackColor = true;
             this.buttonListWord.Click += new System.EventHandler(this.buttonListWord_Click);
             // 
+            // buttonTranslate
+            // 
+            this.buttonTranslate.Location = new System.Drawing.Point(12, 105);
+            this.buttonTranslate.Name = "buttonTranslate";
+            this.buttonTranslate.Size = new System.Drawing.Size(283, 23);
+            this.buttonTranslate.TabIndex = 5;
+            this.buttonTranslate.Text = "Переводчик";
+            this.buttonTranslate.UseVisualStyleBackColor = true;
+            this.buttonTranslate.Click += new System.EventHandler(this.buttonTranslate_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 364);
+            this.Controls.Add(this.buttonTranslate);
             this.Controls.Add(this.buttonListWord);
             this.Controls.Add(this.buttonTopArray);
             this.Controls.Add(this.buttonLearnSpeed);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button buttonLearnSpeed;
         private System.Windows.Forms.Button buttonTopArray;
         private System.Windows.Forms.Button buttonListWord;
+        private System.Windows.Forms.Button buttonTranslate;
     }
 }

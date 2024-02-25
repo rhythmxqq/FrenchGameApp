@@ -28,3 +28,7 @@ C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGam
 C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\obj\Debug\appFrench.ListWordForm.resources
 C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\obj\Debug\appFrench.FormSecondGame.resources
 C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\obj\Debug\appFrench.ProfileForm.resources
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\obj\Debug\appFrench.FormTranslate.resources
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gorilla\Desktop\NikitaNOT DELETE\visualStudioNikita\appFrench\FrenchGameApp\obj\Debug\appFrench.csproj.CopyComplete
